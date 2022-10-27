@@ -13,7 +13,7 @@ from django.contrib.auth.models import User
 class WorkerUserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'password']
+        fields = ['first_name', 'last_name', 'username','email', 'password']
         widgets = {
             'password': forms.PasswordInput()
         }
@@ -28,7 +28,7 @@ class WorkerForm(forms.ModelForm):
 class JbUserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'password']
+        fields = ['first_name', 'last_name', 'username', 'email', 'password']
         widgets = {
             'password': forms.PasswordInput()
         }
@@ -43,7 +43,7 @@ class JbForm(forms.ModelForm):
 class InsuranceUserForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'password']
+        fields = ['first_name', 'last_name', 'username','email',  'password']
         widgets = {
             'password': forms.PasswordInput()
         }
@@ -58,7 +58,7 @@ class InsuranceForm(forms.ModelForm):
 class PoliceForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ['first_name', 'last_name', 'username', 'password']
+        fields = ['first_name', 'last_name', 'username','email',  'password']
         widgets = {
             'password': forms.PasswordInput()
         }
