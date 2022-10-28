@@ -223,6 +223,7 @@ def admin_approve_jb(request):
 def admin_approve_insurance(request):
     # those whose approval are needed
     doctors = models.Insurance.objects.all().filter(status=False)
+
     return render(request, 'admin_approve_insurance.html', {'doctors': doctors})
 
 

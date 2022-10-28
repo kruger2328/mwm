@@ -47,6 +47,11 @@
           <th>Name</th>
           <th>Mobile</th>
           <th>Address</th>
+          <th>DOB</th>
+          <th>Blood</th>
+
+          <th>Email</th>
+          <th>Gender</th>
 
           <th>Approve</th>
 
@@ -59,6 +64,10 @@
         <td>{{d.user}}</td>
         <td>{{d.mobile}}</td>
         <td>{{d.address}}</td>
+        <td>{{d.dob}}</td>
+        <td>{{d.blood}}</td>
+        <td>{{d.user.email}}</td>
+        <td>{{d.gender}}</td>
 
         <td><a class="btn btn-primary btn-xs" href="{% url 'approve' d.id  %}"><span class="glyphicon glyphicon-ok"></span></a></td>
 

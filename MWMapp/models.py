@@ -9,23 +9,23 @@ from django.contrib.auth.models import User
   
 # iterable
 GENDER_CHOICES =(
-    ("1", "Male"),
-    ("2", "Female"),
+    ("Male", "Male"),
+    ("Female", "Female"),
 )
 TYPE_CHOICES =(
-    ("1", "Private"),
-    ("2", "Public"),
+    ("Private", "Private"),
+    ("Public", "Public"),
 )
 
 BLOOD_GROUP =(
-    ("1", "O-"),
-    ("1", "O+"),
-    ("3", "A+"),
-    ("4", "A-"),
-    ("5", "B+"),
-    ("6", "B-"),
-    ("7", "AB+"),
-    ("8", "AB-"),
+    ("o-", "O-"),
+    ("o+", "O+"),
+    ("A+", "A+"),
+    ("A-", "A-"),
+    ("B+", "B+"),
+    ("B-", "B-"),
+    ("AB+", "AB+"),
+    ("Ab-", "AB-"),
 )
 # Create your models here.
 class Worker(models.Model):
@@ -38,12 +38,12 @@ class Worker(models.Model):
     gender = models.CharField(
                                     max_length = 20,
                                     choices = GENDER_CHOICES,
-                                    default = '1')
+                                    default = 'Male')
 
     blood = models.CharField(
                                     max_length = 20,
                                     choices = BLOOD_GROUP,
-                                    default = '1')
+                                    default = 'A+')
     state = models.CharField(max_length=20,null=False)
 
 
@@ -83,7 +83,7 @@ class Insurance(models.Model):
     types = models.TextField(
                                     max_length = 20,
                                     choices = TYPE_CHOICES,
-                                    default = '1',)
+                                    default = 'Public',)
     registration_no = models.CharField(max_length=20, null=False)
 
     @property

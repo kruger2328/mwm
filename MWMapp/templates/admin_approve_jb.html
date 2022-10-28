@@ -33,6 +33,10 @@
           <th>Profile Picture</th>
           <th>Mobile</th>
           <th>Address</th>
+          <th>DOB</th>
+          <th>Gender</th>
+
+          <th>Email</th>
 
           <th>Approve</th>
 
@@ -44,6 +48,9 @@
         <td> <img src="{% static d.profile_pic.url %}" alt="Profile Pic" height="400px" width="400px" /></td>
         <td>{{d.mobile}}</td>
         <td>{{d.address}}</td>
+        <td>{{d.dob}}</td>
+        <td>{{d.gender}}</td>
+        <td>{{d.user.email}}</td>
 
         <td><a class="btn btn-primary btn-xs" href="{% url 'approve1' d.id  %}"><span class="glyphicon glyphicon-ok"></span></a></td>
 

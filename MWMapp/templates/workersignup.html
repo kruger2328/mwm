@@ -162,16 +162,17 @@ a.socialIcon:hover,
                   {% csrf_token %}
                    
                     <p class="text-muted"> Please enter your details !</p>
-                      {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
-                        {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
-                          {% render_field userForm.username class="form-control" placeholder="Username" %}
-                          {% render_field userForm.email class="form-control" placeholder="email" %}
-                            {% render_field userForm.password class="form-control" placeholder="Password" %}
-                              {% render_field workerForm.address class="form-control" placeholder="Address" %}
+                                {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+                                {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
+                                {% render_field userForm.username class="form-control" placeholder="Username" %}
+                                
+                                {% render_field userForm.password class="form-control" placeholder="Password" %}
+                                {% render_field workerForm.address class="form-control" placeholder="Address" %}
                                 {% render_field workerForm.mobile class="form-control" placeholder="Mobile" %}
                                 {% render_field workerForm.gender class="form-control" placeholder="Gender" %}
                                 {% render_field workerForm.blood class="form-control" placeholder="Blood Group" %}
                                 {% render_field workerForm.state class="form-control" placeholder="State" %}
+                                {% render_field userForm.email class="form-control" placeholder="email" %}
                                 <h3>Dob</h3>
                                 {% render_field workerForm.dob type="date" class="form-control" placeholder="D-O-B" %}<br><br><br>
                                 <h3>Identity card</h3>

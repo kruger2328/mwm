@@ -29,25 +29,32 @@
     <table class="table table-hover" id="dev-table">
       <thead>
         <tr>
-          
+          <th>ID card</th>
           <th>Type {
             1-private,
             2-public
      }     </th>
+          
+          
+          <th>Email</th>
+          
+          
           <th>Mobile</th>
           <th>Address</th>
-
           <th>Approve</th>
+          
 
         </tr>
       </thead>
       {% for d in doctors %}
       <tr>
-       
+        <td> <img src="{% static d.profile_pic.url %}" alt="Profile Pic" height="400px" width="400px" /></td>
         <td>{{d.types}}</td>
+        <td>{{d.user.email}}</td>
+       
         <td>{{d.mobile}}</td>
         <td>{{d.address}}</td>
-
+        
         <td><a class="btn btn-primary btn-xs" href="{% url 'approve2' d.id  %}"><span class="glyphicon glyphicon-ok"></span></a></td>
 
       </tr>
