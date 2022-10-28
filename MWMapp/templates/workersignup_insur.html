@@ -168,7 +168,7 @@ a.socialIcon:hover,
                           {% render_field userForm.email class="form-control" placeholder="email" %}
                             {% render_field userForm.password class="form-control" placeholder="Password" %}
                               {% render_field workerForm.address class="form-control" placeholder="Address" %}
-                                {% render_field workerForm.mobile class="form-control" placeholder="Mobile" %}
+                                {% render_field workerForm.mobile pattern="[789][0-9]{9}" class="form-control" placeholder="Mobile" %}
                                 {% render_field workerForm.registration_no class="form-control" placeholder="Reg_no" %}
                                 <h3>Type</h3>
                                 {% render_field workerForm.types class="form-control" placeholder="Reg_no" %}<br><br><br>
